@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ivana Project - Ticket Qoute</title>
+</head>
+<body>
+
+    <h1>Ticket Quote</h1>
+    <form id="flightForm">
+    
+    <div class="form-group">
+        <div>
+            <label for="client">Client:</label>
+            <input type="text" id="client" name="client" required>
+        </div>
+        <div>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div>
+            <label for="via">Via:</label>
+            <select id="via" name="via" required onchange="updateAirlineCode()">
+                <option value="">Select Airline</option>
+                <option value="ETIHAD AIRWAYS">ETIHAD AIRWAYS</option>
+                <option value="EMIRATES AIRLINES">EMIRATES AIRLINES</option>
+                <option value="PHILIPPINE AIRLINES">PHILIPPINE AIRLINES</option>
+                <option value="CEBU PACIFIC AIR">CEBU PACIFIC AIR</option>
+                <option value="SINGAPORE AIRLINES">SINGAPORE AIRLINES</option>
+                <option value="CATHAY PACIFIC">CATHAY PACIFIC</option>
+                <option value="GULF AIRWAYS">GULF AIRWAYS</option>
+                <option value="KUWAIT AIRWAYS">KUWAIT AIRWAYS</option>
+                <option value="SAUDI AIR">SAUDI AIR</option>
+                <option value="QATAR AIRWAYS">QATAR AIRWAYS</option>
+                <option value="THAI AIRWAYS">THAI AIRWAYS</option>
+                <option value="ROYAL BRUNEI">ROYAL BRUNEI</option>
+                <option value="OMAN AIR">OMAN AIR</option>
+            </select>
+        </div>
+        <div>
+            <label for="airlineCode">Airline Code:</label>
+            <input type="text" id="airlineCode" name="airlineCode" readonly>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div>
+            <label for="baggage">Baggage:</label>
+            <select id="baggage" name="baggage" required>
+                <option value="">Select Baggage</option>
+                <option value="10KLS">10KLS</option>
+              <option value="30KLS">15KLS</option>
+                <option value="20KLS">20KLS</option>
+                <option value="25KLS">25KLS</option>
+                <option value="30KLS">30KLS</option>
+              <option value="35KLS">35KLS</option>
+              <option value="40KLS">40KLS</option>
+              <option value="45KLS">45KLS</option>
+              <option value="50KLS">50KLS</option>
+            </select>
+        </div>
+        <div>
+            <label for="handCarry">Hand Carry:</label>
+            <input type="text" id="handCarry" value="7KG" readonly>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div>
+            <label for="meal">Meal:</label>
+            <input type="text" id="meal" value="Meal" readonly>
+        </div>
+    </div>
+      
+      <div class="from-group">
+        <div>
+        <label for="flightDetails">Flight Details:</label>
+        <textarea id="flightDetails" name="flightDetails" required></textarea>
+    </div>
+      </div> 
+
+    <div class="form-group">
+         <div>
+            <label for="sabrePrice">Sabre Price:</label>
+            <input type="number" id="sabrePrice" name="sabrePrice" required>
+        </div>
+        <div>
+            <label for="sellingPrice">Selling Price:</label>
+            <input type="number" id="sellingPrice" name="sellingPrice" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+      <div>
+            <label for="upsell">Upsell:</label>
+            <input type="number" id="upsell" name="upsell" required>
+        </div>
+      
+        <div>
+            <label for="total">Total:</label>
+            <input type="number" id="total" name="total" readonly>
+        </div>
+    </div>
+
+
+
+    <div>
+        <label for="quotation">Quotation:</label>
+        <textarea class="quotation" id="quotation" name="quotation" required></textarea>
+        <br><br>
+        <span id="copyMessage" style="display: none; color: green;">Copied!</span>
+    </div>
+
+    <div class="button-group">
+        <button type="button" id="copyButton" onclick="copyForm()">Copy</button>
+        <button type="reset">Reset</button>
+    </div>
+
+</form>
+
+
+  
+<script></script>
+
+</body>
+</html>
